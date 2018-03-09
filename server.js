@@ -50,6 +50,12 @@ app.get('/about',(req, res)=>{
 
     });
 });
+
+app.get('/project',(req, res)=>{
+    res.render('project.hbs',{
+        pageTitle: 'Project'
+    });
+});
  
 //bad - send a json with error massage
 app.get('/bad',(req, res)=>{
@@ -61,3 +67,4 @@ app.get('/bad',(req, res)=>{
 app.listen(port,()=>{
     console.log(`Sever is up on port ${port}`);
 });
+
